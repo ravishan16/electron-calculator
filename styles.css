@@ -1,0 +1,16 @@
+html, body, .container-fluid {
+    background-color: #ffffff;
+  }
+  
+  .text-input {
+    font-size: 16px;
+  }
+  
+  #ah {
+    color: #000000;
+    background-color: #ffc107;
+    font-size: 20px;
+    letter-spacing: 2px;
+    white-space: pre-wrap;
+    text-align: center;
+  }

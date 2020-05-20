@@ -1,0 +1,25 @@
+{
+  "name": "accrual-calculator",
+  "version": "1.0.0",
+  "description": "Accrual Calculator",
+  "repository": "ravishan16/electron-calculator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --asar=true --arch=x64 --icon=assets/icons/mac/icon.ico --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --asar=true --arch=x64 --icon=assets/icons/mac/icon.ico --prune=true --out=release-builds --version-string.CompanyName='RAVI' --version-string.FileDescription='Accrual Calculator' --version-string.ProductName='Accrual Calculator'",
+    "package-linux": "electron-packager . accrual-calculator-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "installer-mac": "electron-installer-dmg ./release-builds/accrual-calculator-darwin-x64/accrual-calculator.app accrual-calculator-app",
+    "installer-win": "node installers/windows/createinstaller.js",
+    "dist": "build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-packager": "^14.2.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-winstaller": "^4.0.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Accrual Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+  
+  <!-- Scripts -->
+  <script>
+    delete module.exports
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+  <script src="./app.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <div id="container" class="container-fluid">
+      <h1>LCS - Accrual Calculator</h1>
+      <div class="form-group">
+        <label for="ah">Accured Hours</label>
+        <input type="number" class="form-control" id="ah"  disabled>
+      </div>  
+    <form name="calculator">
+        <div class="form-group">
+          <label for="noc">Name of Community</label>
+          <input type="text" class="form-control" id="noc" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="top">Type of Plan</label>
+            <select class="form-control" id="top">
+              <option value="0">Apple</option>
+              <option value="1">Orange</option>
+              <option value="2">Strawberry</option>
+              <option value="3">Jackfruit</option>
+            </select>
+        </div>         
+        <div class="form-check form-check-inline">
+            <div class="btn-group" role="group" aria-label="Type">
+                <input type="button" id="sal" class="btn btn-success" value="Salaried" onclick="salaried()"/>
+                <input type="button" id="hour" class="btn" value="Hourly" onclick="hourly()"/>
+              </div>
+        </div>  
+        <br/>              
+        <div class="form-group">
+            <label for="yos">Years of Service</label>
+            <select class="form-control" id="yos">
+              <option value="0.062">0+</option>
+              <option value="0.069">3+</option>
+              <option value="0.081">5+</option>
+              <option value="0.096">10+</option>
+            </select>
+          </div>        
+          <div class="form-group">
+            <label for="how">Hours Worked (This Pay Period)</label>
+            <input type="number" class="form-control" id="how" value=80>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <input type="button" value="Calculate"  class="btn btn-success" id="calc"  onclick="calculate()" >
+            </div>
+          </div>                  
+      </form>
+  </div>
+</body>
+
+</html>
