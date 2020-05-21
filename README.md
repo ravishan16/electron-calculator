@@ -20,6 +20,7 @@ npm run installer-mac
 ```
 
 ## Windows Package and Installer
+### use windows machine to build this
 ```
 npm run package-win
 npm run installer-win
